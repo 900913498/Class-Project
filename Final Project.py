@@ -7,7 +7,7 @@ logging.basicConfig(filename="alerts.log", level=logging.INFO, format="%(asctime
 class SimpleIDS:
     def __init__(self, suspicious_ips=None, suspicious_ports=None):
         # Define suspicious IPs and ports
-        self.suspicious_ips = ["192.168.1.100", "10.0.0.5", "203.0.113.45"] if suspicious_ips else []
+        self.suspicious_ips = ["192.168.1.100", "10.0.0.5", "203.0.113.45", 10.0.0.231"] if suspicious_ips else []
         self.suspicious_ports = suspicious_ports if suspicious_ports else [22, 23, 3389]  # Common ports for SSH, Telnet, RDP
 
     def packet_callback(self, packet):
